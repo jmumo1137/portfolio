@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- THEME CSS LINK (for toggle) -->
+    <link id="theme-link" rel="stylesheet" href="theme/light.css">
+
+    <!-- FONT AWESOME (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Jonathan's Portfolio</title>
+</head>
+
+<body>
+    <!-- THEME SWITCH -->
+    <div class="theme-switch" id="theme-switch">
+        <input type="checkbox" class="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="label">
+            <img src="Images/white_sun_with_rays.png" alt="Light mode icon">
+            <img src="Images/moon.png" alt="Dark mode icon">
+            <div class="switcher"></div>
+        </label>
+    </div>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="user">
+            <img src="Images/male-technologist.png" alt="Profile avatar" />
+            <h3 class="name">Jonathan Mumo</h3>
+            <p class="post">Junior CyberSecurity Analyst</p>
+        </div>
+
+        <nav class="navbar">
+            <ul class="nav_menu">
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#footer">contact</a></li>
+            </ul>
+
+            <button id="open-menu-btn">
+                <img src="images/bars.png" width="30" height="30" alt="Open menu">
+            </button>
+
+            <button id="close-menu-btn" style="display: none;">
+                <img src="images/cancel.png" width="30" height="30" alt="Close menu">
+            </button>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+        <h3>HI THERE <img src="images/waving-hand.png" alt="" width="50" height="50"></h3>
+        <h1>I'm <span>Jonathan Mumo</span></h1>
+        <p></p>
+        <a href="#about"><button class="btn">About Me</button></a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+    <h1 class="heading"><span>about</span> me </h1>
+
+    <div class="row">
+        <div class="info">
+            <h1><span>name :</span> Jonathan Mumo</h1>
+            <h1><span>age :</span> 26</h1>
+            <h1><span>qualifications :</span> BSc. Information Technology</h1>
+            <h1><span>specialization :</span> Junior Cybersecurity Analyst & Full-Stack Developer</h1>
+            <h1><span>languages :</span> English</h1>
+            <h1><span>location :</span> Kerugoya, Kenya</h1>
+            <a href="cv/Jonathan Mumo.pdf" download target="_blank" class="btn">Download CV</a>
+        </div>
+
+        <div class="counter">
+            <div class="box">
+                <span>2+</span>
+                <h3>Years of Technical Experience</h3>
+            </div>
+            <div class="box">
+                <span>15+</span>
+                <h3>Completed Web Projects</h3>
+            </div>
+            <div class="box">
+                <span>1</span>
+                <h3>Enterprise Transport Portal Built End-to-End</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- EDUCATION / SKILLS SECTION -->
+    <section class="education" id="education"> 
+    <h1 class="heading"> <span>education / skills</span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/markup.png" width="50" height="50" alt="">
+            <h3>Front-end Development</h3>
+            <p>
+                Experienced in building responsive, user-friendly interfaces using HTML, CSS, JavaScript, and React.js. Skilled in theme switching, UI animations, mobile navigation, and creating clean modern layouts.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="images/php.png" width="50" height="50" alt="">
+            <h3>Backend Development</h3>
+            <p>
+                Capable of developing and maintaining backend systems using Node.js, Express.js, PHP, and MySQL. Skilled in API creation, authentication, database operations, cron jobs, and server-side logic.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="images/net.png" width="50" height="50" alt="">
+            <h3>Networking Skills</h3>
+            <p>
+                Knowledgeable in network configuration, troubleshooting, and administration. Able to set up secure networks, optimize connectivity, and support smooth communication across systems.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="images/dev.png" width="50" height="50" alt="">
+            <h3>Software & System Development</h3>
+            <p>
+                Familiar with software development methodologies and experienced in building real-world systems such as transport management portals. Skilled in Java, Python basics, system automation, and workflow design.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="images/cybersec.jpg" width="50" height="50" alt="">
+            <h3>Cybersecurity</h3>
+            <p>
+               Hands-on cybersecurity experience gained through real projects and continuous self-learning. Skilled in secure authentication, protecting user data, handling environment variables safely, and identifying common vulnerabilities in full-stack applications.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="images/dev ops.png" width="50" height="50" alt="">
+            <h3>Deployment & DevOps Basics</h3>
+            <p>
+                Experienced with cPanel hosting, file permissions, SSL, domain management, cron jobs, and deploying full-stack applications. Able to configure servers, debug deployment issues, and maintain production systems.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+    <h1 class="heading"><span>Portfolio</span></h1>
+
+    <div class="portfolio-container">
+
+        <!-- Project 1: Transport Management Portal -->
+        <div class="portfolio-box">
+        <img src="images/transport-portal.JPG" alt="Transport Portal Screenshot" width="300" height="200">
+            <h3>Transport Management Portal</h3>
+            <p>
+                A full-stack enterprise portal that digitizes transport operations end-to-end. Features order lifecycle automation, driver & vehicle management,
+                fuel/mileage tracking, POD handling, alerts, and payment verification via webhooks.
+            </p>
+            <ul class="tech-stack">
+                <li>React.js (Frontend)</li>
+                <li>Node.js & Express (Backend)</li>
+                <li>SQLite (DB Browser)</li>
+                <li>REST APIs & Webhooks</li>
+            </ul>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <!-- Project 2: Cybersecurity Monitoring Dashboard -->
+        <div class="portfolio-box">
+            <img src="images/cybersecurity-dashboard.JPEG" alt="Cybersecurity Dashboard" width="300" height="200">
+            <h3>Cybersecurity Monitoring Dashboard</h3>
+            <p>
+                A security analytics dashboard designed to track vulnerabilities, system events, suspicious activities,
+                and admin alerts. Includes log monitoring, access control validation, and automated daily alert summaries.
+            </p>
+            <ul class="tech-stack">
+                <li>Node.js (Backend Processing)</li>
+                <li>React.js (UI Components)</li>
+                <li>Cron Jobs (Automated Alerts)</li>
+                <li>JWT Authentication</li>
+            </ul>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+    </div>
+</section>
+
+
+
+   
+
+
+    <!-- FOOTER -->
+    <footer id = footer>
+  <div class="footer-container">
+    <p class="footer-copyright">
+      <span>© 2025</span> Hightimes Web Designs. <span>All Rights Reserved</span>
+    </p>
+
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-socials">
+      <a href="https://wa.me/+254742001119" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://facebook.com/Fabzy Jonah " target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://instagram.com/_jo_.nah_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/fabzy_jonah" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+    <!-- SCROLL UP BUTTON -->
+    <button class="scroll-up" id="scroll-up">
+        <img width="40" height="40" src="images/finger-up-emoji-clipart-21.png" alt="Scroll to top" />
+    </button>
+
+    <!-- MAIN SCRIPT -->
+    <script src="code.js"></script>
+
+</body>
+</html>
