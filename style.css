@@ -32,7 +32,7 @@ html{
 body{
     background: rgb(211, 204, 204);
     overflow-x: hidden;
-    /*padding-left: 35rem;*/
+    padding-left: 35rem;
 }
 body.dark {
     background-color: #1e272e;
