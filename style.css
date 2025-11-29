@@ -32,7 +32,7 @@ html{
 body{
     background: rgb(211, 204, 204);
     overflow-x: hidden;
-    padding-left: 35rem;
+    /*padding-left: 35rem;*/
 }
 body.dark {
     background-color: #1e272e;
@@ -146,7 +146,7 @@ header button{
     transform: translateX(24px);
   }
 section{
-    min-width: 100vh;
+    width: 100%;
     padding: 1rem;
 } 
 .home{
@@ -534,21 +534,23 @@ footer {
   }
  @media  screen and (max-width: 1024px){
      #header{
-         position: fixed;
+         position: relative;
          background: none;
          display: flex;
          justify-content: center;
          align-items: center;
          flex-flow: column;
          text-align: center;
-         width: 25rem;
+         width: 100%;
+         height: auto;
+         padding:2rem 0;
          margin-top: -10rem;
          margin-left: 2rem;
      }
     
      header .user img{
-         height: 25rem;
-         width: 25rem;
+         height: 12rem;
+         width: 12rem;
          border-radius: 50%;
      }
      header .user .name{
@@ -678,15 +680,19 @@ footer {
 }
 @media (max-width: 768px) {
     #header {
-        padding-top: 5rem !important;
+        padding-top: 7rem !important;
         padding-bottom: 2rem;
         text-align: center;  
+        position: relative;        /* Stop overlapping */
+        width: 100%;               /* Full width header */
+        height: auto;              /* Auto height */
+        
     }
 
     header .user img {
         margin-top: 2rem !important;
-        height: 13rem;
-        width: 13rem;
+        height: 10rem;
+        width: 10rem;
         object-fit: cover;
     }
 
@@ -698,8 +704,17 @@ footer {
         top: 1rem !important;
     }
 
+    body {
+    padding-left: 0 !important;
+    overflow-x: hidden;
+    }
+     section {
+        padding: 2rem;
+        width: 100%;
+    }
+
     .home {
-        padding: 5rem 2rem;
+        padding: 4rem 1.5rem;
     }
 
     .home h1 {
@@ -717,17 +732,22 @@ footer {
 
     .about .row {
         flex-direction: column;
-        padding: 0 2rem;
+        padding: 0;
     }
     .about .row .counter {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .about .row .counter .box {
         width: 90%;
         margin: 1rem 0;
+    }
+    .education .box-container {
+        grid-template-columns: 1fr;
+        margin-left: 0;
     }
 
     .portfolio-box {
