@@ -57,7 +57,7 @@ themeCheckbox.addEventListener("change", () => {
             });
         });
 
-        const names = ["Jonathan", "Mumo","Full-Stack Developer","Cybersecurity Analyst"];
+        const names = ["Jonathan Mumo","a Full-Stack Developer","a Junior Cybersecurity Analyst"];
 const typingElement = document.getElementById("typing-name");
 
 let nameIndex = 0;  // index in names array
@@ -81,7 +81,7 @@ function type() {
     if (!isDeleting && charIndex === currentName.length) {
         // Pause at full name
         isDeleting = true;
-        typingSpeed = 1000; // pause before deleting
+        typingSpeed = 2500; // pause before deleting
     } else if (isDeleting && charIndex === 0) {
         // Move to next name
         isDeleting = false;
