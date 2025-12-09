@@ -153,7 +153,12 @@ section{
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 8rem 6rem;
+    align-items: center; 
+    text-align: center; 
+    height: 100vh;
+    width: 100%;
+    position: relative; 
+    
 }
 .home h3{
     font-size: 2.5rem;
@@ -188,87 +193,201 @@ section{
      color: #fff;
      /*background-color: var(--color-yellow);   */
 }
-.btn{
-    padding: .7rem 3rem;
+.home .btn{
+    padding: 0.7rem 3rem;
     background: #333;
     color: #fff;
     cursor: pointer;
     margin-top: 1rem;
     border-radius: 4rem;
     font-size: 2rem;
+    display: block;
+    margin: 1rem auto 0 auto;
+     transition: 0.3s ease;
 }
 .btn:hover{
     background-color: var(--color-yellow);
 }
+
+.home h3, .home h1, .home .btn , .home .hero-socials{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.home h3 { animation-delay: 0.3s; }
+.home h1 { animation-delay: 0.6s; }
+.home .btn { animation-delay: 0.9s; }
+.home .hero-socials {animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 0.5rem;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.hero-socials {
+    padding: 4rem;
+}
+.hero-socials a {
+    margin: 0 1rem;
+    color: var(--color-yellow);
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+.hero-socials a:hover { color: #f39c12; }
+
+
+
 .heading{
     text-align: center;
     margin: 0rem 5rem;
     font-size: 4rem;
-    border-bottom: .1rem solid #fff4;
+    border-bottom: .1rem solid #fff;
     color: rgb(19, 168, 51);
 }
 .heading span{
     color: var(--color-yellow);
 }
-.about .row{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1rem 0rem;
+#typing-name {
+    border-right: 2px solid var(--color-yellow);
+    padding-right: 2px;
+    white-space: nowrap;
+    overflow: hidden;
 }
-.about .row .info{
-    flex: 1 1 48rem;
-    padding: 2rem 1rem;
-    padding-left: 6rem;
+
+/* --- ABOUT SECTION --- */
+.about {
+    padding: 5rem 9%;
 }
-.about .row .info h1{
-    font-size: 2rem;
+
+.about .heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+   
+}
+
+.about .heading span {
     color: var(--color-yellow);
-    padding: 1rem 0;
-    font-weight: normal;
 }
-.about .row .info h1 span{
-    color: rgb(36, 82, 180);
-    padding: 0 1.5rem;
-}
-.about .row .counter{
-    flex: 1 1 48rem;
-    padding: 2rem 1rem;
+
+.about .row {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 3rem;
 }
-.about .row .counter .box {
-    width: 22rem;
-    background: #2b2b2b;
+
+/* --- INFO SECTION --- */
+.about .info {
+    flex: 1 1 45rem;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1e90ff;
+}
+
+.about-role {
+    font-size: 1.6rem;
+    color: rgb(39, 153, 77);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.about-desc {
+    padding: 1.8rem 2rem;
+    border-left: 4px solid var(--accent-color, #1e90ff);
+    font-size: 1.5rem;
+    line-height: 1.7;
+    border-radius: 6px;
+    margin-bottom: 2.5rem;
+}
+
+
+/* --- ABOUT DETAILS LIST --- */
+.about-details {
+    list-style: none;
+    margin-bottom: 2.5rem;
+}
+
+.about-details li {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-details strong {
+    color: #ff4b2b;
+}
+
+/* --- DOWNLOAD BUTTON --- */
+.about .btn {
+    padding: 1rem 2.5rem;
+    color: #fff;
+    border-radius: 6px;
+    background-color: darkolivegreen;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.about .btn:hover {
+    background: #1e90ff;
+    transform: translateY(-3px);
+}
+
+/* --- COUNTERS --- */
+.counter {
+    flex: 1 1 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.counter .box {
+    flex: 1 1 18rem;
     padding: 2rem;
-    margin: 1.5rem;
-    border-radius: 1.2rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #181818;
     text-align: center;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    border-top: 3px solid #1e90ff;
 }
 
-/* Hover effect */
-.about .row .counter .box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+.counter .box:hover {
+    transform: translateY(-6px);
+    background: #1f1f1f;
 }
 
-.about .row .box span{
-    font-size: 3.7rem;
-    color: var(--color-yellow);
+.counter .box span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e90ff;
 }
-.about .row .box h3{
-    font-size: 2rem;
-    color: rgb(27, 161, 27);
-    font-weight: 400;
+
+.counter .box h3 {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    color: #ddd;
+    line-height: 1.4;
 }
-.about .row .box span{
-    font-size: 3.7rem;
-    color: rgb(185, 195, 183);
-}
+
+
 .education .box-container{
     display: grid;
     /* gap: 1rem;    */
@@ -455,7 +574,7 @@ footer span{
 }
 footer {
   /*background-color: #111;*/
-  color: #fff;
+  /*color: #fff;*/
   padding: 40px 20px;
   font-family: Arial, sans-serif;
 }
@@ -482,24 +601,24 @@ footer {
 }
 
 .footer-nav a {
-  color: #fff;
+  color: lightseagreen;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-nav a:hover {
-  color: #f39c12;
+  color: #1e90ff;
 }
 
 .footer-socials a {
-  color: #fff;
+  color: lightseagreen;
   font-size: 1.5rem;
   margin: 0 10px;
   transition: transform 0.3s, color 0.3s;
 }
 
 .footer-socials a:hover {
-  color: #f39c12;
+  color: #1e90ff;
   transform: scale(1.2);
 }
 
@@ -507,7 +626,7 @@ footer {
     margin: 0rem 1rem;
 }
 .socials i{
-    color: #fff;
+    /*color: #fff;*/
     font-size: 2rem;
     cursor: pointer;
     padding: 0rem 1rem;
@@ -621,9 +740,14 @@ footer {
     }
      .home{
          margin-left: 0%;
-         display: inline;
-         justify-content: left;
-         margin-right: 1rem;
+         /*display: inline;*/
+         justify-content: center;
+         align-items: center; 
+         text-align: center;
+         /*margin-right: 1rem;*/
+         height: 100vh;
+         width: 100%;
+         position: relative;
      }
      .education .box-container{
          margin-left: -5rem;

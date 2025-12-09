@@ -60,44 +60,77 @@
 
     <!-- HOME SECTION -->
     <section class="home" id="home">
-        <h3>HI THERE <img src="Images/waving-hand.png" alt="" width="50" height="50"></h3>
-        <h1>I'm <span>Jonathan Mumo</span></h1>
+        <h3>HI <img src="Images/waving-hand.png" alt="" width="50" height="50"></h3>
+        <h1>I'm <span id="typing-name"></span></h1>
         <p></p>
-        <a href="#about"><button class="btn">About Me</button></a>
+        <a href="#about" class="btn">
+    About Me
+    <span class="arrow">↓</span>
+    </a>
+    <div class="hero-socials">
+    <a href="https://github.com/jmumo1137" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/jonathan-mumo" target="_blank">LinkedIn</a>
+    </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="about">
-    <h1 class="heading"><span>about</span> me </h1>
+<section id="about" class="about">
+    <h1 class="heading"><span>about</span> me</h1>
 
     <div class="row">
+
+        <!-- Modern About Info -->
         <div class="info">
-            <h1><span>name :</span> Jonathan Mumo</h1>
-            <h1><span>qualifications :</span> BSc. Information Technology</h1>
-            <h1><span>specialization :</span> Junior Cybersecurity Analyst & Full-Stack Developer</h1>
-            <h1><span>languages :</span> English</h1>
-            <h1><span>location :</span> Kerugoya, Kenya</h1>
+            <h2 class="about-title">Jonathan Mumo</h2>
+            <p class="about-role">Full-Stack Developer & Cybersecurity Analyst</p>
+
+            <p class="about-desc">
+                I build modern, efficient and user-friendly applications using 
+                Python (Flask, Django) and JavaScript (React). I’m passionate 
+                about solving real problems through automation, secure development 
+                practices, and clean architecture.
+                <br><br>
+                I’ve worked on full-stack systems including an end-to-end 
+                enterprise Transport Portal featuring authentication, payments, 
+                order lifecycle automation, fuel & mileage logging, document 
+                management, and API integrations.
+            </p>
+
+            <ul class="about-details">
+                <li><strong>Qualification:</strong> BSc. Information Technology</li>
+                <li><strong>Location:</strong> Nairobi, Kenya</li>
+            </ul>
+
             <a href="cv/Jonathan Mumo.pdf" download target="_blank" class="btn">Download CV</a>
         </div>
 
+        <!-- Modern Counters -->
         <div class="counter">
             <div class="box">
                 <span>2+</span>
                 <h3>Years of Technical Experience</h3>
             </div>
+
             <div class="box">
-                <span>3+</span>
+                <span>4+</span>
                 <h3>Completed Web Projects</h3>
             </div>
+
             <div class="box">
                 <span>1</span>
                 <h3>Enterprise Transport Portal Built End-to-End</h3>
             </div>
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="jonathan-mumo" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ke.linkedin.com/in/jonathan-mumo?trk=profile-badge"> </a></div>
-              
+
+            <div class="box">
+                <span>∞</span>
+                <h3>Problem-Solving Commitment</h3>
+            </div>
         </div>
+
     </div>
 </section>
+
+
 
 
     <!-- EDUCATION / SKILLS SECTION -->

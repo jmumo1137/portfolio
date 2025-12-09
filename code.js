@@ -56,3 +56,43 @@ themeCheckbox.addEventListener("change", () => {
                 transition: "3s",
             });
         });
+
+        const names = ["Jonathan", "Mumo","Full-Stack Developer","Cybersecurity Analyst"];
+const typingElement = document.getElementById("typing-name");
+
+let nameIndex = 0;  // index in names array
+let charIndex = 0;  // index of current letter
+let isDeleting = false;
+let typingSpeed = 150; // typing speed in ms
+
+function type() {
+    const currentName = names[nameIndex];
+
+    if (!isDeleting) {
+        // Typing letters
+        typingElement.textContent = currentName.slice(0, charIndex + 1);
+        charIndex++;
+    } else {
+        // Deleting letters
+        typingElement.textContent = currentName.slice(0, charIndex - 1);
+        charIndex--;
+    }
+
+    if (!isDeleting && charIndex === currentName.length) {
+        // Pause at full name
+        isDeleting = true;
+        typingSpeed = 1000; // pause before deleting
+    } else if (isDeleting && charIndex === 0) {
+        // Move to next name
+        isDeleting = false;
+        nameIndex = (nameIndex + 1) % names.length;
+        typingSpeed = 200; // pause before typing next name
+    } else {
+        typingSpeed = isDeleting ? 50 : 150; // normal typing/deleting speed
+    }
+
+    setTimeout(type, typingSpeed);
+}
+
+type();
+
