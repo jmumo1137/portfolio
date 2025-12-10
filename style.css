@@ -518,7 +518,7 @@ section{
 }
 
  .contact {
-    padding: 4rem 10%;
+    padding: 2rem 10%;
 }
 
 .contact-header {
@@ -529,6 +529,7 @@ section{
 .contact-header p {
     font-size: 2.1rem;
     margin-top: 2.5rem;
+    word-wrap: break-word;
     opacity: 0.8;
 }
 
@@ -984,6 +985,24 @@ footer {
         width: 100%;
     }
 
+     .contact-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+
+    .contact-header p,
+    .contact-info p {
+        text-align: center;        /* Fix alignment */
+        margin: 0 auto;
+    }
+
+    .info-box {
+        text-align: center;         /* Icons + text centered */
+    }
+
+    .info-box h3 i {
+        margin-right: 8px;          /* Space between icon and text */
+    }
+
     .contact .contact-container h3,
     .social-links h3 {
         font-size: 1.5rem;
@@ -1025,6 +1044,15 @@ footer {
 
     .education .box-container .box {
         padding-left: 2rem;
+    }
+
+     .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-header p {
+        text-align: center;
+        margin: 0 auto;
     }
 
     footer p {
