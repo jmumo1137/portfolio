@@ -105,6 +105,15 @@
     transform: scale(1.03);
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
+/* CENTER GALLERY ITEMS ON MOBILE */
+.gallery figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers image + caption */
+    justify-content: center;
+    text-align: center;
+}
+
 /* =========================
    TRANSPORT SYSTEM SCREENSHOTS – LARGE UI
 ========================= */
@@ -187,6 +196,18 @@
         gap: 0.5rem;
     }
 }
+@media (max-width: 600px) {
+    .case-section .gallery {
+        grid-template-columns: 1fr; /* 1 image per row */
+        justify-items: center;       /* center the grid items */
+    }
+
+    .case-section .gallery img {
+        max-width: 95%;  /* add breathing room on narrow screens */
+        height: auto;
+    }
+}
+
 /* =========================
    PRINT / PDF FRIENDLY
 ========================= */
