@@ -238,7 +238,7 @@
     }
 
     .case-section .gallery img {
-        max-width: 95%;  /* add breathing room on narrow screens */
+        /*max-width: 95%;   add breathing room on narrow screens */
         height: auto;
     }
 }
