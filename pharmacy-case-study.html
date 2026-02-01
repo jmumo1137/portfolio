@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy POS & Inventory System – Case Study</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="pharmacy-study.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- =======================
+     CASE STUDY: PHARMACY POS
+======================== -->
+
+<section class="case-study">
+
+    <!-- HERO -->
+    <header class="case-hero">
+        <h1>Pharmacy POS & Inventory System</h1>
+        <p class="subtitle">
+            End-to-end point-of-sale and inventory management system designed for pharmacy operations.
+            Covers product management, sales, stock control, reporting, and role-based access.
+        </p>
+
+        <ul class="meta">
+            <li><strong>Role:</strong> Full-Stack Developer</li>
+            <li><strong>Type:</strong> Business Operations System</li>
+            <li><strong>Stack:</strong> Node.js, Express, SQL, React, Role-Based Access</li>
+        </ul>
+    </header>
+
+    <!-- PROBLEM -->
+    <section class="case-section fade-in">
+        <h2><i class="fa-solid fa-triangle-exclamation"></i> Problem Statement</h2>
+        <p>
+            Manual pharmacy management leads to stock discrepancies, slow sales processing,
+            inaccurate reporting, and difficulties in managing multiple roles across staff.
+        </p>
+        <p>
+            The challenge was to create a reliable, end-to-end system that integrates sales, inventory,
+            and reporting while enforcing role-based access and data integrity.
+        </p>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="case-section fade-in">
+        <h2><i class="fa-solid fa-lightbulb"></i> Solution Overview</h2>
+        <p>
+            The Pharmacy POS system centralizes all operations into a single platform:
+        </p>
+        <ul>
+            <li>Real-time inventory management and stock alerts</li>
+            <li>Role-based access for cashier, manager, and admin</li>
+            <li>Sales transactions and invoice generation</li>
+            <li>Reporting dashboards for performance and stock analysis</li>
+        </ul>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="case-section fade-in diagram">
+        <h2><i class="fa-solid fa-diagram-project"></i> System Architecture</h2>
+        <figure>
+            <img src="Images/pharmacy-architecture.jpg" alt="Pharmacy System Architecture">
+            <figcaption>Frontend → API → Database → Sales & Inventory Flow</figcaption>
+        </figure>
+    </section>
+
+    <!-- KEY FEATURES -->
+    <section class="case-section fade-in">
+        <h2><i class="fa-solid fa-gears"></i> Key Features</h2>
+        <ul>
+            <li>Product and category management</li>
+            <li>Stock control with alerts for low inventory</li>
+            <li>POS workflow for cashier and manager</li>
+            <li>Sales and invoice tracking</li>
+            <li>Role-based authentication and authorization</li>
+        </ul>
+    </section>
+
+    <!-- SECURITY & RELIABILITY -->
+    <section class="case-section fade-in">
+        <h2><i class="fa-solid fa-shield-halved"></i> Security & Reliability</h2>
+        <ul>
+            <li>JWT-based authentication</li>
+            <li>Role-based access control (Admin, Manager, Cashier)</li>
+            <li>Server-side validations to prevent stock or sales inconsistencies</li>
+            <li>Error handling and logging for all critical operations</li>
+        </ul>
+    </section>
+
+    <!-- RESULTS & IMPACT -->
+    <section class="case-section fade-in">
+        <h2><i class="fa-solid fa-chart-line"></i> Results & Impact</h2>
+        <ul>
+            <li>Improved stock accuracy and traceability</li>
+            <li>Faster sales processing and invoicing</li>
+            <li>Centralized reporting for managers and admins</li>
+            <li>Reduced human errors and operational friction</li>
+        </ul>
+    </section>
+
+    <!-- SYSTEM SCREENSHOTS -->
+    <section class="case-section fade-in">
+        <h2><i class="fa-solid fa-image"></i> System Screenshots</h2>
+
+        <div class="gallery">
+            <figure>
+                <img src="Images/pharmacy-dashboard.jpg" alt="Pharmacy Dashboard">
+                <figcaption>Main Dashboard Overview</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/pharmacy-sales.jpg" alt="Sales Workflow">
+                <figcaption>POS Sales Workflow</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/pharmacy-inventory.jpg" alt="Inventory Management">
+                <figcaption>Inventory & Stock Management</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/pharmacy-reports.jpg" alt="Reports Screenshot">
+                <figcaption>Reports & Analytics Dashboard</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- FUTURE IMPROVEMENTS -->
+    <section class="case-section fade-in">
+        <h2><i class="fa-solid fa-forward"></i> Future Improvements</h2>
+        <ul>
+            <li><i class="fa-solid fa-barcode"></i> Implement barcode & QR code scanning for faster stock updates and sales processing.</li>
+        <li><i class="fa-solid fa-truck"></i> Integrate automated supplier ordering when stock levels drop below thresholds.</li>
+        </ul>
+    </section>
+
+</section>
+
+<!-- STICKY BACK BUTTON -->
+<a href="index.html#portfolio" class="sticky-back">
+    <i class="fa-solid fa-arrow-left"></i> Portfolio
+</a>
+
+<!-- OPTIONAL PRINT BUTTON -->
+<button class="btn" onclick="window.print()">Print / Export PDF</button>
+
+</body>
+</html>

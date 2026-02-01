@@ -1,0 +1,298 @@
+/* ===============================
+   TRANSPORT CASE STUDY – PREMIUM
+================================ */
+
+.case-study {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+/* HERO */
+.case-hero {
+    margin-bottom: 4rem;
+    border-left: 6px solid #2563eb;
+    padding-left: 1.5rem;
+}
+
+.case-hero h1 {
+    font-size: 2.8rem;
+    color: #0f172a;
+}
+
+.subtitle {
+    color: #475569;
+    max-width: 850px;
+    margin-top: 0.5rem;
+}
+
+.meta {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.meta li {
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+/* SECTIONS */
+.case-section {
+    margin-bottom: 3.5rem;
+}
+
+.case-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #0f172a;
+}
+
+.case-section h2 i {
+    color: #2563eb;
+}
+
+.case-section p {
+    max-width: 900px;
+    color: #374151;
+}
+
+.case-section ul {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+}
+
+.case-section li {
+    margin-bottom: 0.6rem;
+}
+
+/* LIFECYCLE */
+.lifecycle {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #2563eb;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    font-family: monospace;
+    color: #020617;
+}
+
+/* IMAGE GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+/* =========================
+   TRANSPORT SYSTEM SCREENSHOTS – LARGE UI
+========================= */
+.case-section .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+}
+
+/* Emphasize dashboard clarity */
+.case-section .gallery img {
+    object-fit: cover;
+}
+
+/* Make first screenshot dominant on desktop */
+@media (min-width: 1024px) {
+    .case-section .gallery figure:first-child {
+        grid-column: span 2;
+    }
+}
+
+
+/* FADE-IN ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+/* STICKY BACK BUTTON */
+.sticky-back {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #0f172a;
+    color: #fff;
+    padding: 0.65rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    z-index: 1000;
+}
+
+.sticky-back:hover {
+    background: #020617;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .case-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+/* =========================
+   PRINT / PDF FRIENDLY
+========================= */
+@media print {
+    /* Hide navigation, sticky button, and interactive elements */
+    .sticky-back,
+    .btn:hover,
+    .gallery img:hover {
+        display: none !important;
+    }
+
+    /* Layout adjustments for printing */
+    body, .case-study {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        color: #000;
+        background: #fff;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    /* Section spacing */
+    .case-section {
+        page-break-inside: avoid;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Headers */
+    .case-hero h1, .case-section h2 {
+        color: #000 !important;
+        border: none;
+    }
+
+    /* Remove background and borders from boxes and gallery */
+    .lifecycle,
+    .gallery img,
+    .meta {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Reset images to reasonable width */
+    img {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    /* Fade-in animation not needed for print */
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    /* Lists */
+    ul {
+        padding-left: 1.2rem !important;
+    }
+
+    /* Ensure everything fits nicely on pages */
+    pre.lifecycle {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        border-left: 3px solid #000 !important;
+    }
+}
+@media print {
+    /* Gallery in PDF */
+    .gallery {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .gallery figure {
+        page-break-inside: avoid; /* Prevent splitting figure across pages */
+        margin-bottom: 1rem;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: auto !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .gallery figcaption {
+        font-size: 10pt;
+        color: #000;
+        text-align: center;
+        margin-top: 0.3rem;
+        font-style: italic;
+    }
+    .case-section .gallery {
+    display: block !important;
+}
+
+.case-section .gallery img {
+    object-fit: contain;
+}
+
+    
+    /* Architecture diagrams should behave the same */
+    .diagram, .diagram img, .diagram figure {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+}

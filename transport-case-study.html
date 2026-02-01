@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Management Portal – Case Study</title>
+    <link rel="stylesheet" href="transport-case-study.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- =======================
+     CASE STUDY: TRANSPORT
+======================== -->
+
+<section class="case-study">
+    
+
+
+    <!-- HERO -->
+    <header class="case-hero">
+        <h1>Transport Management Portal</h1>
+        <p class="subtitle">
+            An enterprise-grade system for automating transport operations, enforcing data integrity,
+            and tracking orders from creation to payment.
+        </p>
+
+        <ul class="meta">
+            <li><strong>Role:</strong> Full-Stack Developer</li>
+            <li><strong>Type:</strong> Enterprise Operations System</li>
+            <li><strong>Stack:</strong> React, Node.js, Express, Knex, SQL, REST APIs, Webhooks</li>
+        </ul>
+    </header>
+
+    <!-- PROBLEM -->
+    <section class="case-section">
+        <h2><i class="fa-solid fa-triangle-exclamation"></i>Problem Statement</h2>
+        <p>
+            Transport operations are often managed using manual processes, spreadsheets, and disconnected systems.
+            This leads to missing documents, fuel misuse, incorrect mileage records, delayed payments,
+            and poor visibility across the order lifecycle.
+        </p>
+        <p>
+            The challenge was to build a system that enforces operational discipline,
+            prevents invalid actions, and provides real-time visibility for administrators,
+            dispatchers, and drivers.
+        </p>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="case-section">
+        <h2><i class="fa-solid fa-lightbulb"></i>Solution Overview</h2>
+        <p>
+            The Transport Management Portal was designed as a lifecycle-driven system where every order
+            moves through predefined states. Each transition is guarded by validations,
+            ensuring that required data and documents are present before progressing.
+        </p>
+        <ul>
+            <li>Lifecycle-based order flow</li>
+            <li>Role-based access and actions</li>
+            <li>Strict server-side validations</li>
+            <li>Automated alerts and payment verification</li>
+        </ul>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="case-section">
+        <h2><i class="fa-solid fa-diagram-project"></i>System Architecture</h2>
+        <p>
+            The system follows a modular, API-driven architecture separating concerns between
+            frontend, backend, and external integrations.
+        </p>
+        <ul>
+            <li>Frontend (React): dashboards, forms, guarded navigation</li>
+            <li>Backend (Node.js & Express): business logic, validations, APIs</li>
+            <li>Database (SQL): orders, drivers, vehicles, fuel, mileage, payments</li>
+            <li>Webhooks: payment status verification</li>
+        </ul>
+    </section>
+
+    <!-- ORDER LIFECYCLE -->
+    <section class="case-section">
+        <h2><i class="fa-solid fa-arrows-spin"></i>Order Lifecycle & Validations</h2>
+        <p>
+            Every order follows a strict lifecycle. Transitions are only allowed when
+            system-defined conditions are met.
+        </p>
+
+        <pre class="lifecycle">
+Created → Assigned → Loaded → En Route → Delivered → Paid → Closed
+        </pre>
+
+        <ul>
+            <li>Orders cannot proceed without assigned driver and vehicle</li>
+            <li>Fuel logging requires receipt, liters, and cost</li>
+            <li>Mileage validation ensures logical odometer readings</li>
+            <li>Proof of Delivery is mandatory before delivery confirmation</li>
+            <li>Orders close only after verified payment via webhook</li>
+        </ul>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="case-section">
+        <h2><i class="fa-solid fa-gears"></i>Key Features</h2>
+        <ul>
+            <li>Driver and vehicle management</li>
+            <li>Fuel and mileage tracking with integrity checks</li>
+            <li>Waybill and document management</li>
+            <li>Real-time alerts and status updates</li>
+            <li>Automated invoice generation and payment validation</li>
+        </ul>
+    </section>
+
+    <!-- SECURITY -->
+    <section class="case-section">
+        <h2><i class="fa-solid fa-shield-halved"></i> Security & Reliability</h2>
+        <ul>
+            <li>JWT-based authentication</li>
+            <li>Role-based access control</li>
+            <li>Server-side validation for all critical actions</li>
+            <li>Consistent error handling and logging</li>
+        </ul>
+    </section>
+<!-- IMPACT -->
+    <section class="case-section">
+        <h2><i class="fa-solid fa-chart-line"></i> Results & Impact</h2>
+        <p>
+            The system significantly reduces manual errors, enforces operational discipline,
+            and provides clear visibility across all transport activities.
+        </p>
+        <ul>
+            <li>Improved data accuracy and traceability</li>
+            <li>Reduced disputes around fuel, mileage, and payments</li>
+            <li>Centralized operational reporting</li>
+        </ul>
+    </section>
+
+   <!--GALLERY-->
+    <section class="case-section fade-in">
+    <h2><i class="fa-solid fa-image"></i> System Screenshots</h2>
+
+    <div class="gallery">
+        <figure>
+            <img src="Images/transport-portal.jpg" alt="Dashboard Screenshot">
+            <figcaption>Admin Dashboard Overview</figcaption>
+        </figure>
+        <figure>
+            <img src="Images/order-lifecycle.jpg" alt="Order Lifecycle Screenshot">
+            <figcaption>Order Lifecycle Tracking</figcaption>
+        </figure>
+        <figure>
+            <img src="Images/fuel-logging.jpg" alt="Fuel Logging Screenshot">
+            <figcaption>Fuel Logging</figcaption>
+        </figure>
+        <!--<figure>
+            <img src="Images/payment-status.jpg" alt="Payment Verification Screenshot">
+            <figcaption>Automated Payment Verification</figcaption>
+        </figure>-->
+    </div>
+</section>
+
+
+
+    <!-- FUTURE -->
+    
+
+    <!-- CTA -->
+    <footer class="case-footer">
+        <a href="index.html#portfolio" class="sticky-back"> <i class="fa-solid fa-arrow-left"></i> Portfolio</a>
+    </footer>
+
+    <button class="btn" onclick="window.print()">Print / Export PDF</button>
+
+</section>
+
+</body>
+</html>

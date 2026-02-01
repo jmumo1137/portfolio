@@ -43,8 +43,8 @@
             <ul class="nav_menu">
                 <li><a href="#home">home</a></li>
                 <li><a href="#about">about</a></li>
-                <li><a href="#education">education</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#education">Skills</a></li>
+                <li><a href="#portfolio">projects</a></li>
                 <li><a href="#footer">contact</a></li>
             </ul>
 
@@ -193,47 +193,82 @@
 
 
     <!-- PORTFOLIO SECTION -->
-    <section class="portfolio" id="portfolio">
+<section class="portfolio" id="portfolio">
     <h1 class="heading"><span>Featured Projects</span></h1>
 
     <div class="portfolio-container">
 
         <!-- Project 1: Transport Management Portal -->
         <div class="portfolio-box">
-        <img src="Images/transport-portal.jpg" alt="Transport Portal Screenshot" width="300" height="200">
+            <img src="Images/transport-portal.jpg" alt="Transport Management Portal Screenshot" width="300" height="200">
             <h3>Transport Management Portal</h3>
             <p>
-                A full-stack enterprise portal that digitizes transport operations end-to-end. Features order lifecycle automation, driver & vehicle management,
-                fuel/mileage tracking, POD handling, alerts, and payment verification via webhooks.
+                A full-stack enterprise system that digitizes and automates transport operations from order creation to payment confirmation.
+                Built around a strict order lifecycle with validations, document handling, real-time alerts, and webhook-driven payment verification.
             </p>
             <ul class="tech-stack">
                 <li>React.js (Frontend)</li>
                 <li>Node.js & Express (Backend)</li>
-                <li>SQLite (DB Browser)</li>
-                <li>REST APIs & Webhooks</li>
+                <li>Knex + SQLite / MySQL</li>
+                <li>REST APIs, Webhooks & Role-Based Access</li>
+            </ul>
+            <a href="transport-case-study.html" class="btn">View Case Study</a>
+        </div>
+
+        <!-- Project 2: Security Monitoring & Alerting System -->
+        <div class="portfolio-box">
+            <img src="Images/cybersecurity-dashboard.jpeg" alt="Security Monitoring Dashboard" width="300" height="200">
+            <h3>Security Monitoring & Alerting System</h3>
+            <p>
+                An admin-focused security monitoring platform for tracking system events, suspicious activity, and access violations.
+                Features severity-based alerts, audit logs, JWT authentication, and automated daily security summaries.
+            </p>
+            <ul class="tech-stack">
+                <li>Node.js (Event Processing)</li>
+                <li>React.js (Dashboard UI)</li>
+                <li>Cron Jobs (Automated Reports)</li>
+                <li>JWT Authentication & Access Control</li>
             </ul>
             <a href="#" class="btn">View Project</a>
         </div>
 
-        <!-- Project 2: Cybersecurity Monitoring Dashboard -->
+        <!-- Project 3: Pharmacy POS & Inventory Management System -->
         <div class="portfolio-box">
-            <img src="Images/cybersecurity-dashboard.jpeg" alt="Cybersecurity Dashboard" width="300" height="200">
-            <h3>Cybersecurity Monitoring Dashboard</h3>
+            <img src="Images/pharmacy-dashboard.jpg" alt="Pharmacy POS System Screenshot" width="300" height="200">
+            <h3>Pharmacy POS & Inventory System</h3>
             <p>
-                A security analytics dashboard designed to track vulnerabilities, system events, suspicious activities,
-                and admin alerts. Includes log monitoring, access control validation, and automated daily alert summaries.
+                A complete end-to-end point-of-sale and inventory management system built for pharmacy operations.
+                Covers product management, stock control, sales transactions, reporting, and role-based user access.
             </p>
             <ul class="tech-stack">
-                <li>Node.js (Backend Processing)</li>
-                <li>React.js (UI Components)</li>
-                <li>Cron Jobs (Automated Alerts)</li>
-                <li>JWT Authentication</li>
+                <li>Node.js & Express</li>
+                <li>Relational Database (SQL)</li>
+                <li>POS Workflow & Inventory Logic</li>
+                <li>Role-Based Authentication</li>
             </ul>
-            <a href="#" class="btn">View Project</a>
+            <a href="pharmacy-case-study.html" class="btn">View Case Study</a>
+        </div>
+
+        <!-- Project 4: Club POS Backend Architecture (WIP) -->
+        <div class="portfolio-box">
+            <img src="Images/club-pos-backend.jpg" alt="Club POS Backend Architecture" width="300" height="200">
+            <h3>Scalable Club POS Backend (Architecture)</h3>
+            <p>
+                A backend-first POS architecture designed for high-volume club environments.
+                Focused on clean domain modeling, strict validations, shift management, stock integrity, and reusable service-layer business logic.
+            </p>
+            <ul class="tech-stack">
+                <li>Node.js & Express</li>
+                <li>Knex.js & MySQL</li>
+                <li>Service-Layer Architecture</li>
+                <li>JWT Auth, Roles & Validations</li>
+            </ul>
+            <a href="#" class="btn">View Architecture</a>
         </div>
 
     </div>
 </section>
+
 
 <section class="contact" id="contact">
     <div class="contact-header">
