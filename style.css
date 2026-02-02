@@ -9,6 +9,23 @@ font-family: 'Rubik', sans-serif;
 :root{
     --color-yellow: rgb(53, 195, 183);
     --color-light:white;
+     --scroll-color: var(--scroll-color-light);
+    --scroll-color-light: #222;   /* dark dot for light mode */
+    --scroll-color-dark: #f1c40f; /* gold dot for dark mode */
+}
+/* Light mode default */
+.scroll-cue span {
+    border: 2px solid var(--scroll-color-light);
+}
+.scroll-cue span::before {
+    background: var(--scroll-color-light);
+}
+/* Dark mode */
+body.dark .scroll-cue span {
+    border: 2px solid var(--scroll-color-dark);
+}
+body.dark .scroll-cue span::before {
+    background: var(--scroll-color-dark);
 }
 *{
     margin: 0;
@@ -37,6 +54,8 @@ body{
 body.dark {
     background-color: #1e272e;
     color: var(--color-light);
+    --scroll-color: var(--scroll-color-dark);
+    --scroll-color: #f1c40f; /* gold pops on dark */
   }
   body.dark section.education .box p {
     color: #ffffff; /* white text */
@@ -250,6 +269,74 @@ section{
 .hero-socials a:hover {
      color: #f39c12; 
      transform: scale(1.2);
+}
+/* SCROLL CUE */
+.scroll-cue {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  opacity: 0;
+  animation: cueFadeIn 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.scroll-cue span {
+  display: block;
+  width: 22px;
+  height: 36px;
+  border: 2px solid var(--scroll-color);
+  border-radius: 20px;
+  position: relative;
+  animation: pulse 1.8s infinite;
+}
+
+/* Dot */
+.scroll-cue span::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--scroll-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.scroll-cue span {
+ box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+body.dark .scroll-cue span {
+    box-shadow: 0 0 12px rgba(241,196,15,0.6); /* gold glow in dark */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
+/* Fade in nicely like your hero text */
+@keyframes pulseIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes cueFadeIn {
+  to { opacity: 1; }
 }
 
 
